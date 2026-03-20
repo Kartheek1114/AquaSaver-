@@ -1,0 +1,8 @@
+
+{
+  "name": "AquaSaver Smart Platform",
+  "description": "A comprehensive water conservation platform with real-time IoT monitoring, personalized AI-driven insights, and a collaborative ecosystem for experts and service providers.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
