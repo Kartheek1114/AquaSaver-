@@ -214,6 +214,11 @@ app.post('/api/auth/google', async (req, res) => {
     return res.status(400).json({ message: 'Google idToken is required' });
   }
 
+  if (!GOOGLE_CLIENT_ID) {
+    console.error('CRITICAL: GOOGLE_CLIENT_ID is not defined in backend environment variables.');
+    return res.status(500).json({ message: 'Server configuration error' });
+  }
+
   try {
     const client = new OAuth2Client(GOOGLE_CLIENT_ID);
     const ticket = await client.verifyIdToken({
