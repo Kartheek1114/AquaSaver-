@@ -53,7 +53,8 @@ const Login = () => {
                     theme: 'outline',
                     size: 'large',
                     text: 'continue_with',
-                    width: '100%',
+                    width: googleButtonRef.current.offsetWidth,
+                    alignment: 'center',
                 });
             } catch (e) {
                 console.error('Google init error', e);
@@ -143,7 +144,7 @@ const Login = () => {
                             </div>
                             <div
                                 ref={googleButtonRef}
-                                className="mt-4"
+                                className="mt-4 flex justify-center"
                                 aria-label="Continue with Google"
                             />
                         </div>
